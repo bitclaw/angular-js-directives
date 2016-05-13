@@ -9,6 +9,7 @@
   /* @ngInject */
   function PeopleController($q, dataservice, logger) {
     var vm = this;
+    vm.knightMe = knightMe;
     vm.people = {};
 
     getPeople();
@@ -20,5 +21,10 @@
           logger.success('Got some people');
         });
     }
+
+    function knightMe(people) {
+      people.rank = "Knight";
+    }
+
   }
 })();
