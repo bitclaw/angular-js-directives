@@ -17,9 +17,12 @@
         user: '='
       },
       controller: function($scope) {
-        console.log($scope);
+        $scope.collapsed = false;
         $scope.knightMe = function(user) {
           user.rank = 'Knight';
+        };
+        $scope.collapse = function() {
+          $scope.collapsed = !$scope.collapsed;
         };
       }
     };
