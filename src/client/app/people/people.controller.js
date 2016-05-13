@@ -10,6 +10,20 @@
   function PeopleController($q, dataservice, logger) {
     var vm = this;
     vm.people = {};
+    
+    vm.user2 = {
+      name: 'Han Solo',
+      address: {
+        street: 'PO Box 123',
+        city: 'Mos Eisley',
+        planet: 'Tattoine'
+      },
+      friends: [
+        'Han',
+        'Leia',
+        'Chewbacca'
+      ]
+    };
 
     getPeople();
 
