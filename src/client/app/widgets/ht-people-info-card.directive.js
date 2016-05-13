@@ -12,14 +12,12 @@
     return {
       //link: link,
       templateUrl: 'app/widgets/ht-people-info-card.html',
-      restrict: 'E'
+      restrict: 'E',
+      controller: function($scope) {
+        $scope.knightMe = function(user) {
+          user.rank = 'Knight';
+        };
+      }
     };
-
-    // function link(scope, element, attrs) {
-    //   attrs.$observe('htImgPerson', function(value) {
-    //     value = basePath + (value || unknownImage);
-    //     attrs.$set('src', value);
-    //   });
-    // }
   }
 })();
