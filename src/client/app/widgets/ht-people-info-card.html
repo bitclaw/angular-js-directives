@@ -3,15 +3,9 @@
   <div class="panel-heading" ng-click="collapse()">{{user.name}}</div>
   <div class="panel-body" ng-hide="collapsed">
 
-    <div ng-show="!user.address">
-      <h4>Address</h4>
-      {{user.address.street}} </br>
-      {{user.address.city}} </br>
-      {{user.address.planet}} </br>
-    </div>
+    <ht-people-address></ht-people-address>
 
-    <h4>Address</h4>
-
+    <h4>Friends</h4>
     <ul>
       <li ng-repeat="friend in user.friends">
         {{friend}}
