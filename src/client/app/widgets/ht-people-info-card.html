@@ -1,0 +1,23 @@
+<div class="panel panel-primary">
+  </br>
+  <div class="panel-heading">{{vm.people.name}}</div>
+  <div class="panel-body">
+
+    <div ng-show="!user.address">
+      <h4>Address</h4>
+      {{vm.people.address.street}} </br>
+      {{vm.people.address.city}} </br>
+      {{vm.people.address.planet}} </br>
+    </div>
+
+    <h4>Address</h4>
+
+    <ul>
+      <li ng-repeat="friend in vm.people.friends">
+        {{friend}}
+      </li>
+    </ul>
+    <button class="btn btn-success" ng-click="">Knight me</button>
+
+  </div>
+</div>
