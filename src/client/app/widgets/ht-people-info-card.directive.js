@@ -13,7 +13,9 @@
       //link: link,
       templateUrl: 'app/widgets/ht-people-info-card.html',
       restrict: 'E',
-      scope: {},
+      scope: {
+        user: '='
+      },
       controller: function($scope) {
         console.log($scope);
         $scope.knightMe = function(user) {
